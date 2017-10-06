@@ -24,7 +24,7 @@ RUN autoreconf -fvi \
     && make install
 
 # redis port: 22122, stat/admin port: 222222, client port 8102
-EXPOSE 8101 22122 22222 8102
+EXPOSE 8101 8102 22122 22222
 # RUN sysctl vm.overcommit_memory=1
 
 ENTRYPOINT ["/dynomite/startup.sh"]
